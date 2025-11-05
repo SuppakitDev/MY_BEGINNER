@@ -26,13 +26,14 @@ export default async function Page() {
 
   return (
     <main className="mx-auto max-w-7xl p-6 space-y-6">
-            <div className="flex gap-3">
+<div className="flex gap-3">
+  <div className="text-green-500 font-bold">
+  Hello from new feature branch 🚀
+</div>
   <Link href="/items" className="rounded-xl border px-3 py-2">Items</Link>
   <Link href="/login" className="rounded-xl border px-3 py-2">Login</Link>
 </div>
-<div className="text-green-500 font-bold">
-  Hello from new feature branch 🚀
-</div>
+
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="font-heading text-2xl">Operations Dashboard
