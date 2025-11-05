@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: 255 255 255;        /* white */
+  --fg: 23 23 23;           /* neutral-900 */
+  --card: 255 255 255;
+  --muted: 115 115 115;     /* neutral-500 */
+  --ring: 229 231 235;      /* neutral-200 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.dark {
+  --bg: 10 10 10;           /* near-black */
+  --fg: 229 229 229;        /* neutral-200 */
+  --card: 23 23 23;         /* neutral-900 */
+  --muted: 163 163 163;     /* neutral-400 */
+  --ring: 38 38 38;         /* neutral-800 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: var(--font-body);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply min-h-dvh;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--fg));
+}
+
+/* Card presets */
+.card {
+  @apply rounded-2xl border shadow-sm;
+  background-color: rgb(var(--card));
+  border-color: rgb(var(--ring));
+}
+
+/* Table presets */
+.table {
+  @apply w-full text-sm;
+}
+.table thead th {
+  @apply text-left font-medium text-neutral-600 dark:text-neutral-300;
+}
+.table tbody tr {
+  @apply border-b border-neutral-200/70 dark:border-neutral-800;
 }
