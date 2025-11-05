@@ -21,7 +21,7 @@ export async function GET(request: Request) {
       .request()
     //   .input("minQty", sql.Int, minQty)
     //   .input("top", sql.Int, top)
-      .query(`select top(10)Reservation from STOPlan`);
+      .query(`select top(10)* from dbo.Items`);
 
     return NextResponse.json(result.recordset, { status: 200 });
   } catch (err: any) {
