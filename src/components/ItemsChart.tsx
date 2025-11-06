@@ -14,16 +14,16 @@ import {
 type Item = { Id: number; Name: string; Qty: number; UpdatedAt: string };
 
 const COLORS = [
-  "#4ade80", // green
-  "#60a5fa", // blue
-  "#f472b6", // pink
-  "#fb923c", // orange
-  "#facc15", // yellow
-  "#a78bfa", // purple
-  "#34d399", // emerald
-  "#f87171", // red
-  "#22d3ee", // cyan
-  "#f59e0b", // amber
+  "#00d34dff", // green
+  "#0965d6ff", // blue
+  "#ec007aff", // pink
+  "#f77810ff", // orange
+  "#f1c202ff", // yellow
+  "#8c68f8ff", // purple
+  "#00ffa2ff", // emerald
+  "#f84444ff", // red
+  "#0cd4f3ff", // cyan
+  "#fda000ff", // amber
 ];
 
 export default function ItemsChart({ rows }: { rows: Item[] }) {
