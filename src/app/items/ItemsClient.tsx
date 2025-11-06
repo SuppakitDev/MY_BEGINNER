@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ExportButton } from "./ExportButton";
 import { toast } from "sonner";
+import ItemsChart from "@/components/ItemsChart";
 
 type Item = { Id: number; Name: string; Qty: number; UpdatedAt: string };
 
@@ -134,7 +135,7 @@ export default function ItemsClient() {
           <ExportButton />
         </div>
       </div>
-
+    <ItemsChart rows={rows} />
       <div className="card overflow-hidden">
         <table className="table">
           <thead className="sticky top-0 bg-white dark:bg-neutral-900">
@@ -195,6 +196,8 @@ export default function ItemsClient() {
           </tbody>
         </table>
       </div>
+      
     </section>
+    
   );
 }
