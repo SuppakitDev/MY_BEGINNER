@@ -33,8 +33,9 @@ export default async function Page() {
   <div className="text-green-500 font-bold">
   Hello from new feature branch 🚀
 </div>
-  <Link href="/items" className="rounded-xl border px-3 py-2">Items</Link>
-  <Link href="/login" className="rounded-xl border px-3 py-2">Login</Link>
+  <Link href="/items" className="rounded-md border px-3 py-2">Items</Link>
+  <Link href="/login" className="rounded-md border px-3 py-2">Login</Link>
+  <Link href="/chat" className="rounded-md border px-3 py-2">Chat</Link>
 </div>
 
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
